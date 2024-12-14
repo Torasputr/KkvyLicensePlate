@@ -1,0 +1,41 @@
+<HomeIndex>:
+    AnchorLayout:
+        anchor_y: 'center'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+            padding: 28
+            spacing: 28
+            Label:
+                text: "Pengenal Plat Nomor"
+                bold: True
+                font_size: 40
+                size_hint_y: None
+                height: self.texture_size[1]
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 28
+                Button:
+                    text: "Detect"
+                    font_size: 28
+                    bold: True
+                    height: 52
+                    size_hint_y: None
+                    on_press: root.navigate_to_detect()
+                Button:
+                    text: "History"
+                    font_size: 28
+                    bold: True
+                    height: 52
+                    size_hint_y: None
+                    on_press: root.navigate_to_history()
+
+                Button:
+                    text: "Setting"
+                    font_size: 28
+                    bold: True
+                    height: 52
+                    size_hint_y: None

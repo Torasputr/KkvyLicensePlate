@@ -1,0 +1,49 @@
+<DetectConfirm>:
+    AnchorLayout:
+        anchor_y: 'top'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: 52
+            padding: [10, 0]
+            Button:
+                text: "Back"
+                font_size: 30
+                bold: True
+                size_hint_y: None
+                height: 52
+                on_release: root.go_back()
+    AnchorLayout:
+        anchor_y: 'center'
+        anchor_x: 'center'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: None, None
+            size: self.minimum_size
+            padding: 20
+            spacing: 10
+            Label:
+                text: "Confirm License Plate"
+                font_size: 24
+                bold: True
+                halign: 'center'
+                valign: 'middle'
+                size_hint_y: None
+                height: 40
+            TextInput:
+                id: plate_input
+                font_size: 20
+                multiline: False
+                size_hint_y: None
+                height: 40
+                width: 400
+            BoxLayout:
+                size_hint_y: None
+                height: 50
+                spacing: 10
+                width: 200
+                size_hint_x: None
+                Button:
+                    text: "Confirm"
+                    size_hint_x: 1
+                    on_release: root.confirm_plate()
